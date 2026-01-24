@@ -11,10 +11,10 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                <span className="text-foreground font-medium">Luiza Verônica</span> é dançarina, coreógrafa e pesquisadora do movimento. Atualmente desenvolve sua pesquisa de Mestrado em Ciências do Movimento Humano na UFRGS, investigando as intersecções entre dança contemporânea e processos somáticos.
+                <span className="text-foreground font-medium">Luiza Verônica</span> é Licenciada em Dança pela UFRGS e Mestranda em Ciências do Movimento Humano na mesma instituição.
               </p>
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                Com mais de uma década de experiência em dança, sua trajetória artística perpassa o ballet clássico, a dança contemporânea e as práticas de improvisação. Como professora, dedica-se a criar espaços de experimentação onde técnica e expressividade caminham juntas.
+                Atua como dançarina, pesquisadora, professora e coreógrafa, dedicando-se a criar espaços de experimentação onde técnica e expressividade caminham juntas.
               </p>
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
                 Seu trabalho coreográfico busca traduzir em movimento as tensões e delicadezas da experiência humana, criando obras que dialogam com temas como memória, identidade e pertencimento.
@@ -43,7 +43,7 @@ const About = () => {
               </div>
               <div className="text-center md:text-left">
                 <p className="font-body text-primary font-medium">Graduação</p>
-                <p className="font-body text-muted-foreground">Licenciatura em Dança</p>
+                <p className="font-body text-muted-foreground">Licenciatura em Dança - UFRGS</p>
               </div>
             </div>
           </div>
