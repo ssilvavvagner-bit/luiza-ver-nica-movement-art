@@ -134,7 +134,7 @@ const Contact = () => {
       {/* Floating Social Buttons */}
       <div className="fixed right-6 bottom-6 flex flex-col gap-3 z-40">
         <a
-          href="https://instagram.com"
+          href="https://instagram.com/luizaaveronica"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 rounded-full bg-gradient-accent flex items-center justify-center text-foreground shadow-glow hover:scale-110 transition-transform duration-300"
@@ -143,7 +143,7 @@ const Contact = () => {
           <Instagram size={24} />
         </a>
         <a
-          href="https://wa.me/5500000000000"
+          href="https://wa.me/5551992427280"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 rounded-full bg-whatsapp flex items-center justify-center text-foreground shadow-soft hover:scale-110 transition-transform duration-300"
