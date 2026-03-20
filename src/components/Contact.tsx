@@ -1,36 +1,6 @@
-import { useState } from 'react';
-import { Send, Instagram, MessageCircle } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { Instagram, MessageCircle, Mail } from 'lucide-react';
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Mensagem enviada!",
-      description: "Obrigada pelo contato. Responderei em breve.",
-    });
-
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
-  };
 
   return (
     <section id="contato" className="py-24 md:py-32 bg-gradient-hero relative">
@@ -43,91 +13,17 @@ const Contact = () => {
           Tem alguma pergunta ou quer trabalhar comigo? Entre em contato!
         </p>
 
-        <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block font-body text-sm text-foreground mb-2">
-                  Nome
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground font-body placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                  placeholder="Seu nome"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block font-body text-sm text-foreground mb-2">
-                  E-mail
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground font-body placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                  placeholder="seu@email.com"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="subject" className="block font-body text-sm text-foreground mb-2">
-                Assunto
-              </label>
-              <select
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground font-body focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-              >
-                <option value="">Selecione um assunto</option>
-                <option value="aulas">Aulas de Dança</option>
-                <option value="workshop">Workshops</option>
-                <option value="coreografia">Coreografia</option>
-                <option value="consultoria">Consultoria de Pesquisa</option>
-                <option value="outro">Outro</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block font-body text-sm text-foreground mb-2">
-                Mensagem
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={5}
-                className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground font-body placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
-                placeholder="Sua mensagem..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full py-4 rounded-lg bg-gradient-accent text-foreground font-body font-medium hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? 'Enviando...' : (
-                <>
-                  Enviar mensagem
-                  <Send size={18} />
-                </>
-              )}
-            </button>
-          </form>
+        <div className="max-w-md mx-auto text-center">
+          <p className="mb-8 text-foreground font-body text-base">
+            Para entrar em contato diretamente, clique no botão abaixo para enviar um e-mail.
+          </p>
+          <a
+            href="mailto:luizaaveronica@gmail.com"
+            className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-lg bg-gradient-accent text-foreground font-body font-medium hover:shadow-glow transition-all duration-300"
+          >
+            Enviar e-mail
+            <Mail size={18} />
+          </a>
         </div>
       </div>
 

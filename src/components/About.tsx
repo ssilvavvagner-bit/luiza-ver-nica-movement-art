@@ -1,3 +1,5 @@
+import profilePhoto from '@/assets/fotomeio.jpg';
+
 const About = () => {
   return (
     <section id="sobre" className="py-24 md:py-32 bg-gradient-hero">
@@ -23,9 +25,11 @@ const About = () => {
 
             <div className="relative">
               <div className="aspect-[3/4] rounded-lg overflow-hidden bg-gradient-card shadow-card">
-                <div className="w-full h-full bg-secondary flex items-center justify-center">
-                  <span className="text-muted-foreground font-body text-sm">Foto de perfil</span>
-                </div>
+                <img
+                  src={profilePhoto}
+                  alt="Foto de perfil de Luiza Verônica"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 border-2 border-primary/30 rounded-lg -z-10" />
             </div>

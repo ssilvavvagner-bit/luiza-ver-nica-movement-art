@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import heroImage from '@/assets/hero-dancer.jpg';
+import heroImage from '@/assets/Fotocapa.jpg';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Luiza Verônica dançando"
+          alt="Luiza Verônica"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
