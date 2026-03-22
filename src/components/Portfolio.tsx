@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import performanceImg from '@/assets/performance.jpg';
+import Reveal from '@/components/ui/Reveal';
 
 type MediaItem = {
   id: number;
@@ -35,13 +36,17 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-6">
-        <h2 className="font-display text-4xl md:text-5xl font-semibold text-gradient text-center mb-4">
-          Portfólio
-        </h2>
-        <div className="w-16 h-[2px] bg-gradient-accent mx-auto mb-12" />
+        <Reveal delay={100}>
+          <div>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold text-gradient text-center mb-4">
+              Portfólio
+            </h2>
+            <div className="w-16 h-[2px] bg-gradient-accent mx-auto mb-12" />
+          </div>
+        </Reveal>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <Reveal delay={300} direction="none" className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category}
@@ -55,38 +60,38 @@ const Portfolio = () => {
               {category}
             </button>
           ))}
-        </div>
+        </Reveal>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {filteredItems.map((item, index) => (
-            <button
-              key={item.id}
-              onClick={() => setSelectedItem(item)}
-              className="group relative aspect-square rounded-lg overflow-hidden bg-gradient-card shadow-card hover:shadow-glow transition-all duration-500"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {item.thumbnail ? (
-                <img
-                  src={item.thumbnail}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full bg-secondary flex items-center justify-center">
-                  <span className="text-muted-foreground font-body text-xs">{item.title}</span>
-                </div>
-              )}
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
-                {item.type === 'video' && (
-                  <Play className="text-primary mb-2" size={32} />
+            <Reveal key={item.id} delay={400 + index * 90} direction="up">
+              <button
+                onClick={() => setSelectedItem(item)}
+                className="group relative aspect-square w-full rounded-lg overflow-hidden bg-gradient-card shadow-card hover:shadow-glow transition-all duration-500"
+              >
+                {item.thumbnail ? (
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-secondary flex items-center justify-center">
+                    <span className="text-muted-foreground font-body text-xs">{item.title}</span>
+                  </div>
                 )}
-                <p className="font-display text-lg text-foreground text-center">{item.title}</p>
-                <p className="font-body text-sm text-muted-foreground">{item.category}</p>
-              </div>
-            </button>
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
+                  {item.type === 'video' && (
+                    <Play className="text-primary mb-2" size={32} />
+                  )}
+                  <p className="font-display text-lg text-foreground text-center">{item.title}</p>
+                  <p className="font-body text-sm text-muted-foreground">{item.category}</p>
+                </div>
+              </button>
+            </Reveal>
           ))}
         </div>
 
