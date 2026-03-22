@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
+import performanceImg from '@/assets/performance.jpg';
 
 type MediaItem = {
   id: number;
@@ -10,7 +11,7 @@ type MediaItem = {
 };
 
 const portfolioItems: MediaItem[] = [
-  { id: 1, type: 'image', thumbnail: '', title: 'Performance I', category: 'Performance' },
+  { id: 1, type: 'image', thumbnail: performanceImg, title: 'Performance I', category: 'Performance' },
   { id: 2, type: 'video', thumbnail: '', title: 'Solo Contemporâneo', category: 'Vídeo' },
   { id: 3, type: 'image', thumbnail: '', title: 'Ensaio Fotográfico', category: 'Fotografia' },
   { id: 4, type: 'image', thumbnail: '', title: 'Coreografia Coletiva', category: 'Performance' },
@@ -65,9 +66,17 @@ const Portfolio = () => {
               className="group relative aspect-square rounded-lg overflow-hidden bg-gradient-card shadow-card hover:shadow-glow transition-all duration-500"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-full h-full bg-secondary flex items-center justify-center">
-                <span className="text-muted-foreground font-body text-xs">{item.title}</span>
-              </div>
+              {item.thumbnail ? (
+                <img
+                  src={item.thumbnail}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-secondary flex items-center justify-center">
+                  <span className="text-muted-foreground font-body text-xs">{item.title}</span>
+                </div>
+              )}
               
               {/* Overlay */}
               <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
@@ -94,11 +103,19 @@ const Portfolio = () => {
             >
               <X size={32} />
             </button>
-            <div className="max-w-4xl w-full aspect-video bg-gradient-card rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <p className="font-display text-2xl text-foreground mb-2">{selectedItem.title}</p>
-                <p className="font-body text-muted-foreground">{selectedItem.category}</p>
-              </div>
+            <div className="max-w-4xl w-full bg-gradient-card rounded-lg flex items-center justify-center p-4">
+              {selectedItem.thumbnail ? (
+                <img
+                  src={selectedItem.thumbnail}
+                  alt={selectedItem.title}
+                  className="max-w-full max-h-[90vh] object-contain"
+                />
+              ) : (
+                <div className="text-center">
+                  <p className="font-display text-2xl text-foreground mb-2">{selectedItem.title}</p>
+                  <p className="font-body text-muted-foreground">{selectedItem.category}</p>
+                </div>
+              )}
             </div>
           </div>
         )}
