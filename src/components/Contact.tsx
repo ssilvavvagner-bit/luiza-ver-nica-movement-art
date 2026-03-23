@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Instagram, MessageCircle, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { SiInstagram, SiWhatsapp } from 'react-icons/si';
 import Reveal from '@/components/ui/Reveal';
 
 const Contact = () => {
@@ -89,19 +90,19 @@ const Contact = () => {
           href="https://instagram.com/luizaaveronica"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-14 h-14 rounded-full bg-gradient-accent flex items-center justify-center text-foreground shadow-glow hover:scale-110 transition-transform duration-300"
+          className="w-14 h-14 rounded-full bg-[#E4405F] flex items-center justify-center text-white shadow-glow hover:scale-110 transition-transform duration-300"
           aria-label="Instagram"
         >
-          <Instagram size={24} />
+          <SiInstagram size={22} />
         </a>
         <a
           href="https://wa.me/5551992427280"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-14 h-14 rounded-full bg-whatsapp flex items-center justify-center text-foreground shadow-soft hover:scale-110 transition-transform duration-300"
+          className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-soft hover:scale-110 transition-transform duration-300"
           aria-label="WhatsApp"
         >
-          <MessageCircle size={24} />
+          <SiWhatsapp size={24} />
         </a>
       </div>
     </section>

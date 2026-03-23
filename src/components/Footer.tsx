@@ -1,4 +1,5 @@
-import { Instagram, Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import { SiInstagram } from 'react-icons/si';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,10 +22,10 @@ const Footer = () => {
               href="https://instagram.com/luizaaveronica"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-[#E4405F] hover:opacity-85 transition-opacity"
               aria-label="Instagram"
             >
-              <Instagram size={20} />
+              <SiInstagram size={20} />
             </a>
             <a
               href="mailto:contato@luizaveronica.com"
