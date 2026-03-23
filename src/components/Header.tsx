@@ -38,16 +38,9 @@ const Header = () => {
       }`}
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="font-display text-2xl font-semibold tracking-wide text-foreground hover:text-primary transition-colors"
-        >
+        <span className="font-display text-2xl font-semibold tracking-wide text-foreground">
           Luiza Verônica
-        </a>
+        </span>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
