@@ -32,6 +32,13 @@ const events = [
 ];
 
 const Agenda = () => {
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contato');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleLearnMore = (eventTitle: string) => {
     const params = new URLSearchParams(window.location.search);
     params.set('evento', eventTitle);
@@ -40,11 +47,7 @@ const Agenda = () => {
     const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}#contato`;
     window.history.replaceState({}, '', nextUrl);
     window.dispatchEvent(new Event('site:evento-selecionado'));
-
-    const contactSection = document.querySelector('#contato');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToContact();
   };
 
   return (
