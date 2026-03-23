@@ -5,7 +5,7 @@ const events = [
   {
     id: 1,
     title: 'Turma de Contemporâneo - Iniciantes',
-    date: '2025 • Segundas e Quartas',
+    date: '2026 • Segundas e Quartas',
     time: '19h - 20h30',
     location: 'Porto Alegre, RS',
     status: 'Inscrições Abertas',
@@ -14,7 +14,7 @@ const events = [
   {
     id: 2,
     title: 'Workshop Intensivo de Improvisação',
-    date: '15-16 de Fevereiro, 2025',
+    date: '15-16 de Abril, 2026',
     time: '10h - 17h',
     location: 'São Paulo, SP',
     status: 'Últimas vagas',
@@ -23,7 +23,7 @@ const events = [
   {
     id: 3,
     title: 'Espetáculo "Fragmentos"',
-    date: '22 de Março, 2025',
+    date: '22 de Maio, 2026',
     time: '20h',
     location: 'Teatro São Pedro - POA',
     status: 'Em breve',
