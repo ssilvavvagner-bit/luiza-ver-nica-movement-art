@@ -3,6 +3,8 @@ import { Play, X } from 'lucide-react';
 import academicoLicenciatura from '@/assets/Licenciatura em Dança.jpeg';
 import laureaAcademica from '@/assets/laurea academica.jpg';
 import fotoBio from '@/assets/1. Foto para Bio.jpg';
+import rosto from '@/assets/3. ROSTO STUDIO.jpg';
+import fotocapa from '@/assets/Fotocapa.jpg';
 import destaqueImg from '@/assets/destaque.jpeg';
 import destaquesImg from '@/assets/destaque1.12.jpeg';
 import ensaioFotografico from '@/assets/Ensaiofotografico.jpg';
@@ -32,8 +34,10 @@ const portfolioItems: MediaItem[] = [
     details: 'Espetáculo: A paixão de Cristo - 2025',
   },
   { id: 2, type: 'video', thumbnail: 'https://img.youtube.com/vi/I9iSfFIMUBk/hqdefault.jpg', title: 'Show Mano Brown', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/I9iSfFIMUBk' },
-  { id: 3, type: 'image', thumbnail: ensaioFotografico, title: 'Ensaio Fotográfico', category: 'Fotografia' },
-  { id: 15, type: 'image', thumbnail: fotoBio, title: 'Foto para Bio', category: 'Fotografia' },
+  { id: 3, type: 'image', thumbnail: ensaioFotografico, title: '', category: 'Fotografia' },
+  { id: 15, type: 'image', thumbnail: fotoBio, title: '', category: 'Fotografia' },
+  { id: 16, type: 'image', thumbnail: rosto, title: '', category: 'Fotografia' },
+  { id: 17, type: 'image', thumbnail: fotocapa, title: '', category: 'Fotografia' },
   { id: 4, type: 'image', thumbnail: performanceDancarinaCirco, title: 'Dançarina Circo', category: 'Performance' },
   { id: 5, type: 'video', thumbnail: 'https://img.youtube.com/vi/G65qSwj4Q_s/hqdefault.jpg', title: 'Flor do Gueto - Mano Brown', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/G65qSwj4Q_s' },
   {
@@ -109,7 +113,7 @@ const Portfolio = () => {
       return 'Destaque';
     }
 
-    if (item.category === 'Performance' || item.category === 'Fotografia') {
+    if (item.category === 'Performance' || item.category === 'Fotografia' || item.title === '') {
       return '';
     }
 
