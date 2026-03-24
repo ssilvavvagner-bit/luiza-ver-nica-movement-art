@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import academicoLicenciatura from '@/assets/Licenciatura em Dança.jpeg';
-import fotoBio from '@/assets/1. Foto para Bio.jpg';
 import destaqueImg from '@/assets/destaque.jpeg';
 import destaquesImg from '@/assets/destaque1.12.jpeg';
 import ensaioFotografico from '@/assets/Ensaiofotografico.jpg';
@@ -30,10 +29,10 @@ const portfolioItems: MediaItem[] = [
     category: 'Performance',
     details: 'Espetáculo: A paixão de Cristo - 2025',
   },
-  { id: 2, type: 'video', thumbnail: fotoBio, title: 'Show Mano Brown', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/I9iSfFIMUBk' },
+  { id: 2, type: 'video', thumbnail: 'https://img.youtube.com/vi/I9iSfFIMUBk/hqdefault.jpg', title: 'Show Mano Brown', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/I9iSfFIMUBk' },
   { id: 3, type: 'image', thumbnail: ensaioFotografico, title: 'Ensaio Fotográfico', category: 'Fotografia' },
   { id: 4, type: 'image', thumbnail: performanceDancarinaCirco, title: 'Dançarina Circo', category: 'Performance' },
-  { id: 5, type: 'video', thumbnail: '', title: 'Workshop em SP', category: 'Vídeo' },
+  { id: 5, type: 'video', thumbnail: 'https://img.youtube.com/vi/G65qSwj4Q_s/hqdefault.jpg', title: 'Flor do Gueto - Mano Brown', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/G65qSwj4Q_s' },
   {
     id: 6,
     type: 'image',
@@ -53,7 +52,31 @@ const portfolioItems: MediaItem[] = [
     featured: true,
     details: 'Destaque Melhor Bailarina\nDestaque Coreografia Jaguarão em Dança 2023;\nDestaque Melhor Bailarina Jaguarão em Dança 2023;\nDestaque Coreógrafa Jaguarão em Dança 2023;\nDestaque Melhor Bailarina da noite Bagé em Dança 2019;\nDestaque Garopaba em Dança 2022;\nCoreografia convidada para mostra de dança no evento MDA de Veranópolis.',
   },
-  { id: 9, type: 'video', thumbnail: '', title: 'Processo Criativo', category: 'Vídeo' },
+  { id: 9, type: 'video', thumbnail: 'https://img.youtube.com/vi/lnnvqjyY8ic/hqdefault.jpg', title: 'Animation', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/lnnvqjyY8ic' },
+  {
+    id: 11,
+    type: 'video',
+    thumbnail: 'https://img.youtube.com/vi/5O-0ZvbUe2Y/hqdefault.jpg',
+    title: 'Festival Danças Urbanas',
+    category: 'Vídeo',
+    videoUrl: 'https://www.youtube.com/embed/5O-0ZvbUe2Y',
+  },
+  {
+    id: 12,
+    type: 'video',
+    thumbnail: 'https://img.youtube.com/vi/SeNhO7oNgGw/hqdefault.jpg',
+    title: 'Paranóia - Ebony',
+    category: 'Vídeo',
+    videoUrl: 'https://www.youtube.com/embed/SeNhO7oNgGw',
+  },
+  {
+    id: 13,
+    type: 'video',
+    thumbnail: 'https://img.youtube.com/vi/cQpyPtKV_rA/hqdefault.jpg',
+    title: 'Coreografia',
+    category: 'Vídeo',
+    videoUrl: 'https://www.youtube.com/embed/cQpyPtKV_rA',
+  },
   {
     id: 10,
     type: 'image',
