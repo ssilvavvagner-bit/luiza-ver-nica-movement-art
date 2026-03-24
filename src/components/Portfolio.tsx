@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
-import academicoLicenciatura from '@/assets/ACADÊMICO Licenciatura em Dança_.jpg';
+import academicoLicenciatura from '@/assets/Licenciatura em Dança.jpeg';
 import ensaioFotografico from '@/assets/Ensaiofotografico.jpg';
 import performanceAtrizDancarina from '@/assets/PERFORMANCE Atriz e Dançarina Madalena.6.jpg';
 import performanceDancarinaCirco from '@/assets/PERFORMANCEDançarina Circo.jpg';
