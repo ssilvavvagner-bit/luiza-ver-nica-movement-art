@@ -32,7 +32,7 @@ const events = [
   {
     id: 4,
     title: 'Movimento Grupo de Dança (Popping)',
-    date: 'Consulte os dias da turma',
+    date: 'Quartas',
     time: '21:10 - 22:00',
     location: 'Guaíba',
     status: 'Turma ativa',
