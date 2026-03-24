@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import academicoLicenciatura from '@/assets/Licenciatura em Dança.jpeg';
 import laureaAcademica from '@/assets/laurea academica.jpg';
+import manoBrown from '@/assets/manobrown.jpg';
 import fotoBio from '@/assets/1. Foto para Bio.jpg';
 import rosto from '@/assets/3. ROSTO STUDIO.jpg';
 import fotocapa from '@/assets/Fotocapa.jpg';
@@ -51,6 +52,13 @@ const portfolioItems: MediaItem[] = [
   },
   { id: 7, type: 'image', thumbnail: academicoLicenciatura, title: 'Licenciatura em Dança', category: 'Acadêmico' },
   { id: 14, type: 'image', thumbnail: laureaAcademica, title: 'Láurea Acadêmica', category: 'Acadêmico' },
+  {
+    id: 18,
+    type: 'image',
+    thumbnail: manoBrown,
+    title: 'Bailarina Festival Turá',
+    category: 'Performance',
+  },
   {
     id: 8,
     type: 'image',
