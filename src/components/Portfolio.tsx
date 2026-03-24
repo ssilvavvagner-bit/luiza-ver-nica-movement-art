@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import academicoLicenciatura from '@/assets/Licenciatura em Dança.jpeg';
+import fotoBio from '@/assets/1. Foto para Bio.jpg';
 import destaqueImg from '@/assets/destaque.jpeg';
 import destaquesImg from '@/assets/destaque1.12.jpeg';
 import ensaioFotografico from '@/assets/Ensaiofotografico.jpg';
@@ -17,6 +18,7 @@ type MediaItem = {
   category: string;
   details?: string;
   featured?: boolean;
+  videoUrl?: string;
 };
 
 const portfolioItems: MediaItem[] = [
@@ -28,7 +30,7 @@ const portfolioItems: MediaItem[] = [
     category: 'Performance',
     details: 'Espetáculo: A paixão de Cristo - 2025',
   },
-  { id: 2, type: 'video', thumbnail: '', title: 'Solo Contemporâneo', category: 'Vídeo' },
+  { id: 2, type: 'video', thumbnail: fotoBio, title: 'Show Mano Brown', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/I9iSfFIMUBk' },
   { id: 3, type: 'image', thumbnail: ensaioFotografico, title: 'Ensaio Fotográfico', category: 'Fotografia' },
   { id: 4, type: 'image', thumbnail: performanceDancarinaCirco, title: 'Dançarina Circo', category: 'Performance' },
   { id: 5, type: 'video', thumbnail: '', title: 'Workshop em SP', category: 'Vídeo' },
@@ -172,8 +174,18 @@ const Portfolio = () => {
             >
               <X size={32} />
             </button>
-            <div className="max-w-4xl w-full flex flex-col items-center justify-center gap-3">
-              {selectedItem.thumbnail ? (
+            <div className="max-w-4xl w-full flex flex-col items-center justify-center gap-3" onClick={(e) => e.stopPropagation()}>
+              {selectedItem.type === 'video' && selectedItem.videoUrl ? (
+                <div className="w-full aspect-video">
+                  <iframe
+                    src={selectedItem.videoUrl}
+                    title={selectedItem.title}
+                    className="w-full h-full rounded-lg"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              ) : selectedItem.thumbnail ? (
                 <>
                   <img
                     src={selectedItem.thumbnail}
