@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import academicoLicenciatura from '@/assets/Licenciatura em Dança.jpeg';
+import destaqueImg from '@/assets/destaque.jpeg';
+import destaquesImg from '@/assets/destaque1.12.jpeg';
 import ensaioFotografico from '@/assets/Ensaiofotografico.jpg';
 import performanceAtrizDancarina from '@/assets/PERFORMANCE Atriz e Dançarina Madalena.6.jpg';
 import performanceDancarinaCirco from '@/assets/PERFORMANCEDançarina Circo.jpg';
@@ -14,6 +16,7 @@ type MediaItem = {
   title: string;
   category: string;
   details?: string;
+  featured?: boolean;
 };
 
 const portfolioItems: MediaItem[] = [
@@ -29,12 +32,38 @@ const portfolioItems: MediaItem[] = [
   { id: 3, type: 'image', thumbnail: ensaioFotografico, title: 'Ensaio Fotográfico', category: 'Fotografia' },
   { id: 4, type: 'image', thumbnail: performanceDancarinaCirco, title: 'Dançarina Circo', category: 'Performance' },
   { id: 5, type: 'video', thumbnail: '', title: 'Workshop em SP', category: 'Vídeo' },
-  { id: 6, type: 'image', thumbnail: performanceMelhorBailarina, title: 'Melhor Bailarina MUV', category: 'Performance' },
+  {
+    id: 6,
+    type: 'image',
+    thumbnail: performanceMelhorBailarina,
+    title: 'Coreografia: É tudo Ismalia',
+    category: 'Destaques',
+    featured: true,
+    details: 'Destaque Melhor Bailarina MUV Festival - 2025\nIndicacao Destaque Coreografa MUV Festival\nMelhor Bailarina Butia em Danca - 2025.',
+  },
   { id: 7, type: 'image', thumbnail: academicoLicenciatura, title: 'Licenciatura em Dança', category: 'Acadêmico' },
+  {
+    id: 8,
+    type: 'image',
+    thumbnail: destaqueImg,
+    title: 'Coreografia: Black Barbie',
+    category: 'Destaques',
+    featured: true,
+    details: 'Destaque Melhor Bailarina\nDestaque Coreografia Jaguarão em Dança 2023;\nDestaque Melhor Bailarina Jaguarão em Dança 2023;\nDestaque Coreógrafa Jaguarão em Dança 2023;\nDestaque Melhor Bailarina da noite Bagé em Dança 2019;\nDestaque Garopaba em Dança 2022;\nCoreografia convidada para mostra de dança no evento MDA de Veranópolis.',
+  },
   { id: 9, type: 'video', thumbnail: '', title: 'Processo Criativo', category: 'Vídeo' },
+  {
+    id: 10,
+    type: 'image',
+    thumbnail: destaquesImg,
+    title: 'Coreografia: Robot Girl',
+    category: 'Destaques',
+    featured: true,
+    details: 'Premiada em primeiro lugar, destaque da noite e melhor bailarina Vem Dançar Sul da América.',
+  },
 ];
 
-const categories = ['Todos', 'Performance', 'Vídeo', 'Fotografia', 'Acadêmico'];
+const categories = ['Todos', 'Destaques', 'Performance', 'Vídeo', 'Fotografia', 'Acadêmico'];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('Todos');
@@ -42,7 +71,21 @@ const Portfolio = () => {
 
   const filteredItems = activeCategory === 'Todos'
     ? portfolioItems
-    : portfolioItems.filter(item => item.category === activeCategory);
+    : activeCategory === 'Destaques'
+      ? portfolioItems.filter(item => item.featured)
+      : portfolioItems.filter(item => item.category === activeCategory);
+
+  const getItemSubtitle = (item: MediaItem) => {
+    if (activeCategory === 'Destaques') {
+      return 'Destaque';
+    }
+
+    if (item.category === 'Performance' || item.category === 'Fotografia') {
+      return '';
+    }
+
+    return item.category;
+  };
 
   return (
     <section id="portfolio" className="py-24 md:py-32 bg-background">
@@ -99,7 +142,9 @@ const Portfolio = () => {
                     <Play className="text-primary mb-2" size={32} />
                   )}
                   <p className="font-display text-lg text-foreground text-center">{item.title}</p>
-                  <p className="font-body text-sm text-muted-foreground">{item.category}</p>
+                  {getItemSubtitle(item) && (
+                    <p className="font-body text-sm text-muted-foreground">{getItemSubtitle(item)}</p>
+                  )}
                 </div>
 
                 {/* Caption bar — mobile only, always visible */}
@@ -117,7 +162,7 @@ const Portfolio = () => {
         {/* Lightbox */}
         {selectedItem && (
           <div
-            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md flex items-center justify-center p-6"
+            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md flex items-center justify-center p-6 overflow-y-auto"
             onClick={() => setSelectedItem(null)}
           >
             <button
@@ -133,10 +178,10 @@ const Portfolio = () => {
                   <img
                     src={selectedItem.thumbnail}
                     alt={selectedItem.title}
-                    className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                    className={`max-w-full object-contain rounded-lg ${selectedItem.details ? 'max-h-[72vh]' : 'max-h-[90vh]'}`}
                   />
                   {selectedItem.details && (
-                    <p className="font-body text-sm md:text-base text-muted-foreground text-center max-w-2xl">
+                    <p className="font-body text-sm md:text-base text-muted-foreground text-center max-w-2xl whitespace-pre-line">
                       {selectedItem.details}
                     </p>
                   )}
