@@ -13,10 +13,18 @@ type MediaItem = {
   thumbnail: string;
   title: string;
   category: string;
+  details?: string;
 };
 
 const portfolioItems: MediaItem[] = [
-  { id: 1, type: 'image', thumbnail: performanceAtrizDancarina, title: 'Atriz e Dançarina', category: 'Performance' },
+  {
+    id: 1,
+    type: 'image',
+    thumbnail: performanceAtrizDancarina,
+    title: 'Atriz e Dançarina',
+    category: 'Performance',
+    details: 'Espetáculo: A paixão de Cristo - 2025',
+  },
   { id: 2, type: 'video', thumbnail: '', title: 'Solo Contemporâneo', category: 'Vídeo' },
   { id: 3, type: 'image', thumbnail: ensaioFotografico, title: 'Ensaio Fotográfico', category: 'Fotografia' },
   { id: 4, type: 'image', thumbnail: performanceDancarinaCirco, title: 'Dançarina Circo', category: 'Performance' },
@@ -119,13 +127,20 @@ const Portfolio = () => {
             >
               <X size={32} />
             </button>
-            <div className="max-w-4xl w-full flex items-center justify-center">
+            <div className="max-w-4xl w-full flex flex-col items-center justify-center gap-3">
               {selectedItem.thumbnail ? (
-                <img
-                  src={selectedItem.thumbnail}
-                  alt={selectedItem.title}
-                  className="max-w-full max-h-[90vh] object-contain rounded-lg"
-                />
+                <>
+                  <img
+                    src={selectedItem.thumbnail}
+                    alt={selectedItem.title}
+                    className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                  />
+                  {selectedItem.details && (
+                    <p className="font-body text-sm md:text-base text-muted-foreground text-center max-w-2xl">
+                      {selectedItem.details}
+                    </p>
+                  )}
+                </>
               ) : (
                 <div className="text-center bg-gradient-card rounded-lg p-8">
                   <p className="font-display text-2xl text-foreground mb-2">{selectedItem.title}</p>
