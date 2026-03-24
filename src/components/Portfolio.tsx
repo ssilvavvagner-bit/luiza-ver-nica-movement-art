@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import academicoLicenciatura from '@/assets/Licenciatura em Dança.jpeg';
+import laureaAcademica from '@/assets/laurea academica.jpg';
+import fotoBio from '@/assets/1. Foto para Bio.jpg';
 import destaqueImg from '@/assets/destaque.jpeg';
 import destaquesImg from '@/assets/destaque1.12.jpeg';
 import ensaioFotografico from '@/assets/Ensaiofotografico.jpg';
@@ -31,6 +33,7 @@ const portfolioItems: MediaItem[] = [
   },
   { id: 2, type: 'video', thumbnail: 'https://img.youtube.com/vi/I9iSfFIMUBk/hqdefault.jpg', title: 'Show Mano Brown', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/I9iSfFIMUBk' },
   { id: 3, type: 'image', thumbnail: ensaioFotografico, title: 'Ensaio Fotográfico', category: 'Fotografia' },
+  { id: 15, type: 'image', thumbnail: fotoBio, title: 'Foto para Bio', category: 'Fotografia' },
   { id: 4, type: 'image', thumbnail: performanceDancarinaCirco, title: 'Dançarina Circo', category: 'Performance' },
   { id: 5, type: 'video', thumbnail: 'https://img.youtube.com/vi/G65qSwj4Q_s/hqdefault.jpg', title: 'Flor do Gueto - Mano Brown', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/G65qSwj4Q_s' },
   {
@@ -43,6 +46,7 @@ const portfolioItems: MediaItem[] = [
     details: 'Destaque Melhor Bailarina MUV Festival - 2025\nIndicacao Destaque Coreografa MUV Festival\nMelhor Bailarina Butia em Danca - 2025.',
   },
   { id: 7, type: 'image', thumbnail: academicoLicenciatura, title: 'Licenciatura em Dança', category: 'Acadêmico' },
+  { id: 14, type: 'image', thumbnail: laureaAcademica, title: 'Láurea Acadêmica', category: 'Acadêmico' },
   {
     id: 8,
     type: 'image',
