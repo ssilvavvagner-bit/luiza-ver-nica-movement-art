@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
-import performanceImg from '@/assets/performance.jpg';
+import academicoLicenciatura from '@/assets/ACADÊMICO Licenciatura em Dança_.jpg';
+import ensaioFotografico from '@/assets/Ensaiofotografico.jpg';
+import performanceAtrizDancarina from '@/assets/PERFORMANCE Atriz e Dançarina Madalena.6.jpg';
+import performanceDancarinaCirco from '@/assets/PERFORMANCEDançarina Circo.jpg';
+import performanceMelhorBailarina from '@/assets/PERFORMANCEMelhor Bailarina do MUV Festival Butiá em Dança.jpg';
 import Reveal from '@/components/ui/Reveal';
 
 type MediaItem = {
@@ -12,14 +16,13 @@ type MediaItem = {
 };
 
 const portfolioItems: MediaItem[] = [
-  { id: 1, type: 'image', thumbnail: performanceImg, title: 'Performance I', category: 'Performance' },
+  { id: 1, type: 'image', thumbnail: performanceAtrizDancarina, title: 'Atriz e Dançarina Madalena', category: 'Performance' },
   { id: 2, type: 'video', thumbnail: '', title: 'Solo Contemporâneo', category: 'Vídeo' },
-  { id: 3, type: 'image', thumbnail: '', title: 'Ensaio Fotográfico', category: 'Fotografia' },
-  { id: 4, type: 'image', thumbnail: '', title: 'Coreografia Coletiva', category: 'Performance' },
+  { id: 3, type: 'image', thumbnail: ensaioFotografico, title: 'Ensaio Fotográfico', category: 'Fotografia' },
+  { id: 4, type: 'image', thumbnail: performanceDancarinaCirco, title: 'Dançarina Circo', category: 'Performance' },
   { id: 5, type: 'video', thumbnail: '', title: 'Workshop em SP', category: 'Vídeo' },
-  { id: 6, type: 'image', thumbnail: '', title: 'Festival de Dança', category: 'Performance' },
-  { id: 7, type: 'image', thumbnail: '', title: 'Projeto de Pesquisa', category: 'Acadêmico' },
-  { id: 8, type: 'image', thumbnail: '', title: 'Espetáculo 2024', category: 'Performance' },
+  { id: 6, type: 'image', thumbnail: performanceMelhorBailarina, title: 'Melhor Bailarina do MUV Festival Butiá em Dança', category: 'Performance' },
+  { id: 7, type: 'image', thumbnail: academicoLicenciatura, title: 'Licenciatura em Dança', category: 'Acadêmico' },
   { id: 9, type: 'video', thumbnail: '', title: 'Processo Criativo', category: 'Vídeo' },
 ];
 
