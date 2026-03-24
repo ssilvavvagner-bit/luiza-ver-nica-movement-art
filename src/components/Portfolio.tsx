@@ -16,12 +16,12 @@ type MediaItem = {
 };
 
 const portfolioItems: MediaItem[] = [
-  { id: 1, type: 'image', thumbnail: performanceAtrizDancarina, title: 'Atriz e Dançarina Madalena', category: 'Performance' },
+  { id: 1, type: 'image', thumbnail: performanceAtrizDancarina, title: 'Atriz e Dançarina', category: 'Performance' },
   { id: 2, type: 'video', thumbnail: '', title: 'Solo Contemporâneo', category: 'Vídeo' },
   { id: 3, type: 'image', thumbnail: ensaioFotografico, title: 'Ensaio Fotográfico', category: 'Fotografia' },
   { id: 4, type: 'image', thumbnail: performanceDancarinaCirco, title: 'Dançarina Circo', category: 'Performance' },
   { id: 5, type: 'video', thumbnail: '', title: 'Workshop em SP', category: 'Vídeo' },
-  { id: 6, type: 'image', thumbnail: performanceMelhorBailarina, title: 'Melhor Bailarina do MUV Festival Butiá em Dança', category: 'Performance' },
+  { id: 6, type: 'image', thumbnail: performanceMelhorBailarina, title: 'Melhor Bailarina MUV', category: 'Performance' },
   { id: 7, type: 'image', thumbnail: academicoLicenciatura, title: 'Licenciatura em Dança', category: 'Acadêmico' },
   { id: 9, type: 'video', thumbnail: '', title: 'Processo Criativo', category: 'Vídeo' },
 ];
