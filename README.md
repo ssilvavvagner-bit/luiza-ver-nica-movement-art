@@ -1,36 +1,56 @@
+# Luiza Verônica — Movement Art
 
+Site portfólio da artista **Luiza Verônica** — dançarina, coreógrafa e pesquisadora — com foco em estética contemporânea, experiência visual imersiva e navegação fluida.
 
-# Luiza Verônica - Movement Art
+---
 
-Site portfólio da artista Luiza Verônica (dançarina, coreógrafa e pesquisadora), desenvolvido com React + Vite e interface baseada em Tailwind CSS.
+## 🌐 Acesso
 
-## Visão geral
+🔗 https://luizaveronica.com.br
+
+---
+
+## 🖼️ Preview
+
+![Preview do site](./preview.png)
+
+---
+
+## ✨ Visão geral
 
 O projeto apresenta:
 
-- Hero com imagem de capa e identidade visual da artista
-- Seção "Sobre" com biografia e formação acadêmica
-- Portfólio com filtro por categorias (Destaques, Performance, Vídeo, Fotografia e Acadêmico)
-- Lightbox para imagens e vídeos (YouTube)
-- Seções de serviços, agenda, contato e rodapé
+* Hero com imagem de capa e identidade visual da artista
+* Seção **Sobre** com biografia e formação acadêmica
+* Portfólio com filtro por categorias (Destaques, Performance, Vídeo, Fotografia e Acadêmico)
+* Lightbox para imagens e vídeos (YouTube)
+* Seções de **Serviços, Agenda, Contato e Rodapé**
+* Interface responsiva com foco em experiência mobile
+* Animações suaves de entrada (fade/scroll reveal)
 
-## Stack utilizada
+---
 
-- React 18
-- TypeScript
-- Vite 5
-- Tailwind CSS
-- shadcn/ui + Radix UI
-- React Router DOM
-- TanStack Query
-- Vitest + Testing Library
+## 🛠️ Stack utilizada
 
-## Requisitos
+* React 18
+* TypeScript
+* Vite 5
+* Tailwind CSS
+* shadcn/ui + Radix UI
+* React Router DOM
+* TanStack Query
+* Vitest + Testing Library
 
-- Node.js 18+ (recomendado: versão LTS)
-- npm (ou Bun, opcional)
+---
 
-## Como executar localmente
+## 📋 Requisitos
+
+* Node.js 18+ (recomendado: LTS)
+* npm (ou Bun, opcional)
+
+---
+
+## 🚀 Como executar localmente
 
 1. Instale as dependências:
 
@@ -44,83 +64,102 @@ npm install
 npm run dev
 ```
 
-O projeto está configurado para rodar na porta **8080**.
+O projeto roda por padrão em:
 
-## Scripts disponíveis
+```
+http://localhost:8080
+```
 
-- Desenvolvimento:
+---
+
+## 📦 Scripts disponíveis
+
+### Desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-- Build de produção:
+### Build de produção
 
 ```bash
 npm run build
 ```
 
-- Build em modo desenvolvimento:
-
-```bash
-npm run build:dev
-```
-
-- Preview do build:
+### Preview do build
 
 ```bash
 npm run preview
 ```
 
-- Lint:
+### Lint
 
 ```bash
 npm run lint
 ```
 
-- Testes (uma execução):
+### Testes
 
 ```bash
 npm run test
 ```
 
-- Testes em watch:
+### Testes em modo watch
 
 ```bash
 npm run test:watch
 ```
 
-## Deploy
+---
 
-Fluxo básico de publicação:
+## 🚀 Deploy
+
+O projeto pode ser publicado via **GitHub Pages, Vercel ou Netlify**.
+
+### Exemplo com GitHub Pages:
 
 ```bash
 npm run build
 npx gh-pages -d dist
 ```
 
-Se preferir, instale o `gh-pages` como dependência de desenvolvimento:
+---
 
-```bash
-npm install -D gh-pages
+## 📁 Estrutura do projeto
+
 ```
-
-## Estrutura principal
-
-```text
 src/
-	components/
-	pages/
-	assets/
-	hooks/
-	lib/
-	test/
+  components/    # Componentes reutilizáveis
+  pages/         # Páginas principais
+  assets/        # Imagens e mídia
+  hooks/         # Hooks customizados
+  lib/           # Utilitários e helpers
+  test/          # Testes
 ```
 
-## Fluxo de versionamento (exemplo)
+---
+
+## 🔄 Fluxo de versionamento
 
 ```bash
 git add .
-git commit -m "Atualiza conteúdo do projeto"
+git commit -m "Atualiza projeto"
 git push
 ```
+
+---
+
+## 💡 Observações
+
+* Projeto focado em performance e experiência visual
+* Design minimalista e elegante
+* Estrutura preparada para evolução contínua
+* Otimizado para desktop e mobile
+
+---
+
+## 👤 Autoria
+
+Desenvolvido para a artista **Luiza Verônica**
+
+---
