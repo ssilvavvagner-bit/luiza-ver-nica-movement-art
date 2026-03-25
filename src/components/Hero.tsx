@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import heroImage from '@/assets/Fotocapa.jpg';
+import heroImage from '@/assets/hero.webp';
 
 const Hero = () => {
   const scrollToAbout = () => {
