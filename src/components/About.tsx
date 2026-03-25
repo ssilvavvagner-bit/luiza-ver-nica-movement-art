@@ -1,4 +1,4 @@
-import profilePhoto from '@/assets/fotomeio.jpg';
+import profilePhoto from '@/assets/fotomeio.webp';
 import Reveal from '@/components/ui/Reveal';
 
 const About = () => {
