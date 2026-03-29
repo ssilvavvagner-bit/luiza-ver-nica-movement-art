@@ -1,4 +1,4 @@
-import { Users, Sparkles, BookOpen, Lightbulb } from 'lucide-react';
+import { Users, BookOpen } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 
 const services = [
@@ -9,22 +9,10 @@ const services = [
     features: ['Turmas regulares', 'Aulas particulares', 'Todos os níveis'],
   },
   {
-    icon: Sparkles,
-    title: 'Workshops',
-    description: 'Workshops intensivos focados em temas específicos como improvisação, composição coreográfica e práticas somáticas.',
-    features: ['Fins de semana intensivos', 'Grupos e empresas', 'Certificado incluso'],
-  },
-  {
     icon: BookOpen,
     title: 'Coreografia',
     description: 'Criação de coreografias personalizadas para espetáculos, eventos, videoclipes e produções artísticas.',
     features: ['Espetáculos', 'Eventos corporativos', 'Produções audiovisuais'],
-  },
-  {
-    icon: Lightbulb,
-    title: 'Consultoria de Pesquisa',
-    description: 'Orientação e consultoria para projetos de pesquisa em dança, movimento e áreas afins. Suporte metodológico e teórico.',
-    features: ['TCC e Dissertações', 'Projetos artísticos', 'Curadoria'],
   },
 ];
 
