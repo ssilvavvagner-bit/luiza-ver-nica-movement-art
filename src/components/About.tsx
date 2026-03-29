@@ -57,6 +57,30 @@ const About = () => {
               </div>
             </div>
           </Reveal>
+
+          <Reveal delay={620} direction="none">
+            <div className="mt-8 p-8 rounded-lg bg-gradient-card shadow-card">
+              <h3 className="font-display text-2xl font-semibold text-foreground mb-4 text-center">
+                Pesquisas e Publicações
+              </h3>
+              <div className="max-w-2xl mx-auto text-center space-y-4">
+                <p className="font-body text-lg text-foreground">
+                  Popping Animation e Robot: propostas de trabalho para o ensino da dança
+                </p>
+                <p className="font-body text-muted-foreground leading-relaxed">
+                  Pesquisa com propostas práticas para o ensino da dança, com foco em Popping, Animation e Robot.
+                </p>
+                <a
+                  href="https://share.google/AQ4MhLEordh2pIzJA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-accent text-foreground font-body font-medium hover:shadow-glow transition-all duration-300"
+                >
+                  Ler pesquisa completa
+                </a>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
