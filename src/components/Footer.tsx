@@ -29,7 +29,7 @@ const Footer = () => {
             </a>
             <a
               href="mailto:contato@luizaveronica.com"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-primary hover:opacity-85 transition-opacity"
               aria-label="E-mail"
             >
               <Mail size={20} />
