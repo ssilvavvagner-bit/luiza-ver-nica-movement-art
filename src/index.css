@@ -162,12 +162,12 @@
 
 @keyframes socialRingGrow {
   0% {
-    transform: scale(0.14);
-    opacity: 0;
+    transform: scale(0.08);
+    opacity: 0.7;
   }
-  60% {
+  65% {
     transform: scale(1);
-    opacity: 0.95;
+    opacity: 0.28;
   }
   100% {
     transform: scale(1);
@@ -207,9 +207,9 @@
 }
 
 .social-ring-grow {
-  fill: none;
+  fill: color-mix(in srgb, var(--ring-color) 26%, transparent);
   stroke: var(--ring-color);
-  stroke-width: 2.5;
+  stroke-width: 1.8;
   transform-box: fill-box;
   transform-origin: center;
   animation: socialRingGrow 2.4s ease-out infinite;
