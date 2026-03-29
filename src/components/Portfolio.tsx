@@ -116,18 +116,6 @@ const Portfolio = () => {
       ? portfolioItems.filter(item => item.featured)
       : portfolioItems.filter(item => item.category === activeCategory);
 
-  const getItemSubtitle = (item: MediaItem) => {
-    if (activeCategory === 'Destaques') {
-      return 'Destaque';
-    }
-
-    if (item.category === 'Performance' || item.category === 'Fotografia' || item.title === '') {
-      return '';
-    }
-
-    return item.category;
-  };
-
   return (
     <section id="portfolio" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-6">
@@ -180,18 +168,13 @@ const Portfolio = () => {
                 {item.type === 'video' && (
                   <>
                     {/* Overlay hover — desktop only */}
-                    <div className="absolute inset-0 bg-background/80 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col items-center justify-center p-4">
-                      <Play className="text-primary mb-2" size={32} />
-                      <p className="font-display text-lg text-foreground text-center">{item.title}</p>
-                      {getItemSubtitle(item) && (
-                        <p className="font-body text-sm text-muted-foreground">{getItemSubtitle(item)}</p>
-                      )}
+                    <div className="absolute inset-0 bg-background/70 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 hidden md:flex items-center justify-center p-4">
+                      <Play className="text-primary" size={32} />
                     </div>
 
-                    {/* Caption bar — mobile only */}
-                    <div className="absolute bottom-0 left-0 right-0 md:hidden bg-gradient-to-t from-background/90 to-transparent px-3 py-3">
-                      <Play className="text-primary mb-1 mx-auto" size={16} />
-                      <p className="font-display text-sm text-foreground leading-snug text-center whitespace-normal">{item.title}</p>
+                    {/* Play badge — mobile only */}
+                    <div className="absolute top-2 right-2 md:hidden w-8 h-8 rounded-full bg-background/80 flex items-center justify-center">
+                      <Play className="text-primary" size={14} />
                     </div>
                   </>
                 )}
