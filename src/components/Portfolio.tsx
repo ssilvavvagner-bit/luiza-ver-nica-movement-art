@@ -177,24 +177,24 @@ const Portfolio = () => {
                   </div>
                 )}
 
-                {/* Overlay hover — desktop only */}
-                <div className="absolute inset-0 bg-background/80 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col items-center justify-center p-4">
-                  {item.type === 'video' && (
-                    <Play className="text-primary mb-2" size={32} />
-                  )}
-                  <p className="font-display text-lg text-foreground text-center">{item.title}</p>
-                  {getItemSubtitle(item) && (
-                    <p className="font-body text-sm text-muted-foreground">{getItemSubtitle(item)}</p>
-                  )}
-                </div>
+                {item.type === 'video' && (
+                  <>
+                    {/* Overlay hover — desktop only */}
+                    <div className="absolute inset-0 bg-background/80 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col items-center justify-center p-4">
+                      <Play className="text-primary mb-2" size={32} />
+                      <p className="font-display text-lg text-foreground text-center">{item.title}</p>
+                      {getItemSubtitle(item) && (
+                        <p className="font-body text-sm text-muted-foreground">{getItemSubtitle(item)}</p>
+                      )}
+                    </div>
 
-                {/* Caption bar — mobile only, always visible */}
-                <div className="absolute bottom-0 left-0 right-0 md:hidden bg-gradient-to-t from-background/90 to-transparent px-3 py-3">
-                  {item.type === 'video' && (
-                    <Play className="text-primary mb-1 mx-auto" size={16} />
-                  )}
-                  <p className="font-display text-sm text-foreground leading-snug text-center whitespace-normal">{item.title}</p>
-                </div>
+                    {/* Caption bar — mobile only */}
+                    <div className="absolute bottom-0 left-0 right-0 md:hidden bg-gradient-to-t from-background/90 to-transparent px-3 py-3">
+                      <Play className="text-primary mb-1 mx-auto" size={16} />
+                      <p className="font-display text-sm text-foreground leading-snug text-center whitespace-normal">{item.title}</p>
+                    </div>
+                  </>
+                )}
               </button>
             </Reveal>
           ))}
@@ -229,12 +229,19 @@ const Portfolio = () => {
                   <img
                     src={selectedItem.thumbnail}
                     alt={selectedItem.title}
-                    className={`max-w-full object-contain rounded-lg ${selectedItem.details ? 'max-h-[72vh]' : 'max-h-[90vh]'}`}
+                    className={`max-w-full object-contain rounded-lg ${selectedItem.title || selectedItem.details ? 'max-h-[72vh]' : 'max-h-[90vh]'}`}
                   />
-                  {selectedItem.details && (
-                    <p className="font-body text-sm md:text-base text-muted-foreground text-center max-w-2xl whitespace-pre-line">
-                      {selectedItem.details}
-                    </p>
+                  {(selectedItem.title || selectedItem.details) && (
+                    <div className="max-w-2xl text-center space-y-2">
+                      {selectedItem.title && (
+                        <p className="font-display text-xl text-foreground">{selectedItem.title}</p>
+                      )}
+                      {selectedItem.details && (
+                        <p className="font-body text-sm md:text-base text-muted-foreground whitespace-pre-line">
+                          {selectedItem.details}
+                        </p>
+                      )}
+                    </div>
                   )}
                 </>
               ) : (
