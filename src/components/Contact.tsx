@@ -90,19 +90,29 @@ const Contact = () => {
           href="https://instagram.com/luizaaveronica"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-14 h-14 rounded-full bg-[#E4405F] flex items-center justify-center text-white shadow-glow hover:scale-110 transition-transform duration-300"
+          className="social-fab social-fab-instagram"
           aria-label="Instagram"
         >
-          <SiInstagram size={22} />
+          <svg className="social-ring-svg" viewBox="0 0 56 56" aria-hidden="true">
+            <circle className="social-ring-grow" cx="28" cy="28" r="24" />
+          </svg>
+          <span className="social-fab-icon">
+            <SiInstagram size={22} />
+          </span>
         </a>
         <a
           href="https://wa.me/5551992427280"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-soft hover:scale-110 transition-transform duration-300"
+          className="social-fab social-fab-whatsapp"
           aria-label="WhatsApp"
         >
-          <SiWhatsapp size={24} />
+          <svg className="social-ring-svg" viewBox="0 0 56 56" aria-hidden="true">
+            <circle className="social-ring-grow" cx="28" cy="28" r="24" />
+          </svg>
+          <span className="social-fab-icon">
+            <SiWhatsapp size={24} />
+          </span>
         </a>
       </div>
     </section>
