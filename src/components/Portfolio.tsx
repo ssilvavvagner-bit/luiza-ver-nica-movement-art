@@ -3,9 +3,9 @@ import { Play, X } from 'lucide-react';
 import academicoLicenciatura from '@/assets/Licenciatura em Dança.jpeg';
 import laureaAcademica from '@/assets/laurea academica.jpg';
 import manoBrown from '@/assets/manobrown.jpg';
-import fotoBio from '@/assets/1. Foto para Bio.webp';
+import fotoBio from '@/assets/1. Foto para Bio.jpg';
 import rosto from '@/assets/3. ROSTO STUDIO.jpg';
-import fotocapa from '@/assets/hero.webp';
+import fotocapa from '@/assets/modeloup.jpeg';
 import destaqueImg from '@/assets/destaque.jpeg';
 import destaquesImg from '@/assets/destaque1.12.jpeg';
 import ensaioFotografico from '@/assets/Ensaiofotografico.jpg';
@@ -23,6 +23,7 @@ type MediaItem = {
   details?: string;
   featured?: boolean;
   videoUrl?: string;
+  externalUrl?: string;
 };
 
 const portfolioItems: MediaItem[] = [
@@ -38,7 +39,14 @@ const portfolioItems: MediaItem[] = [
   { id: 3, type: 'image', thumbnail: ensaioFotografico, title: '', category: 'Fotografia' },
   { id: 15, type: 'image', thumbnail: fotoBio, title: '', category: 'Fotografia' },
   { id: 16, type: 'image', thumbnail: rosto, title: '', category: 'Fotografia' },
-  { id: 17, type: 'image', thumbnail: fotocapa, title: '', category: 'Fotografia' },
+  {
+    id: 17,
+    type: 'image',
+    thumbnail: fotocapa,
+    title: 'Modelo UP',
+    category: 'Fotografia',
+    externalUrl: 'https://www.instagram.com/reel/DJE7tY3OXRs/?igsh=MW81ZGJqbmU0eDV1aQ==',
+  },
   { id: 4, type: 'image', thumbnail: performanceDancarinaCirco, title: 'Dançarina Circo', category: 'Performance' },
   { id: 5, type: 'video', thumbnail: 'https://img.youtube.com/vi/G65qSwj4Q_s/hqdefault.jpg', title: 'Flor do Gueto - Mano Brown', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/G65qSwj4Q_s' },
   {
@@ -100,7 +108,7 @@ const portfolioItems: MediaItem[] = [
     title: 'Coreografia: Robot Girl',
     category: 'Destaques',
     featured: true,
-    details: 'Premiada em primeiro lugar, destaque da noite e melhor bailarina Vem Dançar Sul da América.',
+    details: 'Premiada em primeiro lugar - Peltas em Dança - 2017\nDestaque da noite e melhor bailarina - Vem Dançar Sul da América - 2017\nCoreografia apresentada na Feira do Livro - Guaíba -2017',
   },
 ];
 
@@ -150,7 +158,14 @@ const Portfolio = () => {
           {filteredItems.map((item, index) => (
             <Reveal key={item.id} delay={400 + index * 90} direction="up">
               <button
-                onClick={() => setSelectedItem(item)}
+                onClick={() => {
+                  if (item.externalUrl) {
+                    window.open(item.externalUrl, '_blank', 'noopener,noreferrer');
+                    return;
+                  }
+
+                  setSelectedItem(item);
+                }}
                 className="group relative aspect-square w-full rounded-lg overflow-hidden bg-gradient-card shadow-card hover:shadow-glow transition-all duration-500"
               >
                 {item.thumbnail ? (
