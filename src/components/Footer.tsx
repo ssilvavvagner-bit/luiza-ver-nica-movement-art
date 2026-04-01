@@ -1,5 +1,4 @@
-import { Mail, MapPin } from 'lucide-react';
-import { SiInstagram } from 'react-icons/si';
+import { MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,22 +17,6 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <a
-              href="https://instagram.com/luizaaveronica"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#E4405F] hover:opacity-85 transition-opacity"
-              aria-label="Instagram"
-            >
-              <SiInstagram size={20} />
-            </a>
-            <a
-              href="mailto:contato@luizaveronica.com"
-              className="text-primary hover:opacity-85 transition-opacity"
-              aria-label="E-mail"
-            >
-              <Mail size={20} />
-            </a>
             <span className="flex items-center gap-2 text-muted-foreground font-body text-sm">
               <MapPin size={16} />
               Porto Alegre, RS
