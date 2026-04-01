@@ -5,7 +5,7 @@ const services = [
   {
     icon: Users,
     title: 'Aulas de Dança',
-    description: 'Aulas regulares de dança contemporânea para diversos níveis, do iniciante ao avançado. Metodologia que integra técnica, expressividade e consciência corporal.',
+    description: 'Aulas regulares de danças urbanas com Luiza Verônica, voltadas para diversos níveis — do iniciante ao avançado. Metodologia que integra técnica, musicalidade, expressividade e consciência corporal.',
     features: ['Turmas regulares', 'Aulas particulares', 'Todos os níveis'],
   },
   {
@@ -30,7 +30,7 @@ const Services = () => {
         </Reveal>
         <Reveal delay={260} direction="none">
           <p className="font-body text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-            Trabalho com diferentes formatos para atender suas necessidades artísticas, pedagógicas e acadêmicas.
+            Trabalho com a dança em diferentes formatos para atender às suas necessidades artísticas de forma personalizada, sensível e estratégica.
           </p>
         </Reveal>
 

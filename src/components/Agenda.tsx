@@ -81,7 +81,7 @@ const Agenda = () => {
         </Reveal>
         <Reveal delay={260} direction="none">
           <p className="font-body text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16">
-            Próximos eventos, aulas e apresentações. Fique por dentro da programação.
+            Aulas regulares, Fique por dentro da programação.
           </p>
         </Reveal>
 
@@ -131,7 +131,7 @@ const Agenda = () => {
 
         <Reveal delay={700} direction="none">
           <p className="font-body text-center text-muted-foreground mt-12">
-            Quer receber novidades sobre novos eventos?{' '}
+            Quer agendar aula particular?{' '}
             <a href="#contato" className="text-primary hover:underline">
               Entre em contato
             </a>
