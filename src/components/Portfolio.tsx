@@ -108,7 +108,7 @@ const portfolioItems: MediaItem[] = [
     title: 'Coreografia: Robot Girl',
     category: 'Destaques',
     featured: true,
-    details: 'Premiada em primeiro lugar - Peltas em Dança - 2017\nDestaque da noite e melhor bailarina - Vem Dançar Sul da América - 2017\nCoreografia apresentada na Feira do Livro - Guaíba -2017',
+    details: 'Premiada em primeiro lugar - Pelotas em Dança - 2017\nDestaque da noite e melhor bailarina - Vem Dançar Sul da América - 2017\nCoreografia apresentada na Feira do Livro - Guaíba -2017',
   },
 ];
 
