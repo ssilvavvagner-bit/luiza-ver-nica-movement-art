@@ -11,8 +11,8 @@ const services = [
   {
     icon: BookOpen,
     title: 'Coreografia',
-    description: 'Criação de coreografias personalizadas para espetáculos, eventos, videoclipes e produções artísticas.',
-    features: ['Espetáculos', 'Eventos corporativos', 'Produções audiovisuais'],
+    description: 'Criação de coreografias personalizadas para espetáculos, eventos: aberturas de pista - aniversários e casamentos, videoclipes e produções artísticas.',
+    features: ['Espetáculos', 'Eventos', 'Produções audiovisuais'],
   },
 ];
 
