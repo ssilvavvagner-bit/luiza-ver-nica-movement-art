@@ -165,7 +165,7 @@ const Portfolio = () => {
         {/* Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {filteredItems.map((item, index) => (
-            <Reveal key={item.id} delay={400 + index * 90} direction="up">
+            <Reveal key={item.id} delay={Math.min(index * 50, 500)} direction="up">
               <button
                 onClick={() => {
                   if (item.externalUrl) {
