@@ -13,6 +13,7 @@ import performanceAtrizDancarina from '@/assets/PERFORMANCE Atriz e Dançarina M
 import performanceDancarinaCirco from '@/assets/PERFORMANCEDançarina Circo.jpg';
 import performanceMelhorBailarina from '@/assets/PERFORMANCEMelhor Bailarina do MUV Festival Butiá em Dança.jpg';
 import bailarinaSemana from '@/assets/sesc.jpeg';
+import robotImg from '@/assets/robot.jpeg';
 import Reveal from '@/components/ui/Reveal';
 
 type MediaItem = {
@@ -86,6 +87,14 @@ const portfolioItems: MediaItem[] = [
     details: 'Destaque Melhor Bailarina\nDestaque Coreografia Jaguarão em Dança 2023;\nDestaque Melhor Bailarina Jaguarão em Dança 2023;\nDestaque Coreógrafa Jaguarão em Dança 2023;\nDestaque Melhor Bailarina da noite Bagé em Dança 2019;\nDestaque Garopaba em Dança 2022;\nCoreografia convidada para mostra de dança no evento MDA de Veranópolis.',
   },
   { id: 9, type: 'video', thumbnail: 'https://img.youtube.com/vi/lnnvqjyY8ic/hqdefault.jpg', title: 'Animation', category: 'Vídeo', videoUrl: 'https://www.youtube.com/embed/lnnvqjyY8ic' },
+  {
+    id: 20,
+    type: 'video',
+    thumbnail: robotImg,
+    title: 'Robot Style',
+    category: 'Vídeo',
+    externalUrl: 'https://vt.tiktok.com/ZSx96SQV3/',
+  },
   {
     id: 11,
     type: 'video',
