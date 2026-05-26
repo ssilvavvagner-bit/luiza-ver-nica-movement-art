@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Mail } from 'lucide-react';
-import { SiInstagram, SiWhatsapp } from 'react-icons/si';
+import { SiInstagram, SiWhatsapp, SiTiktok } from 'react-icons/si';
 import Reveal from '@/components/ui/Reveal';
 
 const Contact = () => {
@@ -86,6 +86,20 @@ const Contact = () => {
 
       {/* Floating Social Buttons */}
       <div className="fixed right-6 bottom-6 flex flex-col gap-3 z-40">
+        <a
+          href="https://www.tiktok.com/@luizaaveronicaa"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-fab social-fab-tiktok"
+          aria-label="TikTok"
+        >
+          <svg className="social-ring-svg" viewBox="0 0 56 56" aria-hidden="true">
+            <circle className="social-ring-grow" cx="28" cy="28" r="24" />
+          </svg>
+          <span className="social-fab-icon">
+            <SiTiktok size={22} />
+          </span>
+        </a>
         <a
           href="https://instagram.com/luizaaveronica"
           target="_blank"

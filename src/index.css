@@ -199,6 +199,10 @@
   --ring-color: #25d366;
 }
 
+.social-fab-tiktok {
+  --ring-color: #25F4EE;
+}
+
 .social-ring-svg {
   position: absolute;
   inset: 0;

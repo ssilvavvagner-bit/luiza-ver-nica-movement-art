@@ -16,15 +16,12 @@ const About = () => {
           </Reveal>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <Reveal delay={300} direction="left" className="space-y-6">
-              <p className="font-body text-lg text-muted-foreground leading-relaxed">
+            <Reveal delay={300} direction="left" className="space-y-8">
+              <p className="font-body text-xl text-muted-foreground leading-relaxed">
                 <span className="text-foreground font-medium">Luiza Verônica</span> é Licenciada em Dança pela UFRGS e Mestranda em Ciências do Movimento Humano na mesma instituição.
               </p>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              <p className="font-body text-xl text-muted-foreground leading-relaxed">
                 Atua como dançarina, pesquisadora, professora e coreógrafa, dedicando-se a criar espaços de experimentação onde técnica e expressividade caminham juntas.
-              </p>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                Seu trabalho coreográfico busca traduzir em movimento as tensões e delicadezas da experiência humana, criando obras que dialogam com temas como memória, identidade e pertencimento.
               </p>
             </Reveal>
 

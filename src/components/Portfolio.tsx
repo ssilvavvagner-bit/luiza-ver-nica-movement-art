@@ -12,6 +12,7 @@ import ensaioFotografico from '@/assets/Ensaiofotografico.jpg';
 import performanceAtrizDancarina from '@/assets/PERFORMANCE Atriz e Dançarina Madalena.6.jpg';
 import performanceDancarinaCirco from '@/assets/PERFORMANCEDançarina Circo.jpg';
 import performanceMelhorBailarina from '@/assets/PERFORMANCEMelhor Bailarina do MUV Festival Butiá em Dança.jpg';
+import bailarinaSemana from '@/assets/sesc.jpeg';
 import Reveal from '@/components/ui/Reveal';
 
 type MediaItem = {
@@ -66,6 +67,14 @@ const portfolioItems: MediaItem[] = [
     thumbnail: manoBrown,
     title: 'Bailarina Festival Turá',
     category: 'Performance',
+  },
+  {
+    id: 19,
+    type: 'image',
+    thumbnail: bailarinaSemana,
+    title: 'Bailarina da semana S',
+    category: 'Performance',
+    details: 'Evento promovido pelo SESC RS',
   },
   {
     id: 8,
