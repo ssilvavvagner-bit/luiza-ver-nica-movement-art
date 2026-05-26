@@ -26,6 +26,7 @@ type MediaItem = {
   featured?: boolean;
   videoUrl?: string;
   externalUrl?: string;
+  objectPosition?: string;
 };
 
 const portfolioItems: MediaItem[] = [
@@ -94,6 +95,7 @@ const portfolioItems: MediaItem[] = [
     title: 'Robot Style',
     category: 'Vídeo',
     externalUrl: 'https://vt.tiktok.com/ZSx96SQV3/',
+    objectPosition: 'top',
   },
   {
     id: 11,
@@ -191,6 +193,7 @@ const Portfolio = () => {
                     src={item.thumbnail}
                     alt={item.title}
                     className="w-full h-full object-cover"
+                    style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                   />
                 ) : (
                   <div className="w-full h-full bg-secondary flex items-center justify-center">
